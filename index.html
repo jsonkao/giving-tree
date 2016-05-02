@@ -5,25 +5,25 @@
 <style>
 canvas {
     border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    background-color: #fdf9f3;
 }
 </style>
 </head>
-<body onload="startGame()">
+<body onload="begin()">
 <script>
 
 var myGamePiece;
 
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 100, 150);
+function begin() {
+    myGamePiece = new component(15, 15, "orange", 100, 150);
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 960;
+        this.canvas.height = 560;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;

@@ -1,12 +1,12 @@
 
-var myGamePiece;
+var bird;
 
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    myGameArea.start();
+function begin() {
+    bird = new component(15, 15, "red", 50, 50);
+    area.start();
 }
 
-var myGameArea = {
+var area = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 480;
@@ -26,13 +26,13 @@ function component(width, height, color, x, y) {
     this.x = x;
     this.y = y;    
     this.update = function(){
-        ctx = myGameArea.context;
+        ctx = area.context;
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
 
 function updateGameArea() {
-    myGameArea.clear();
-    myGamePiece.update();
+    area.clear();
+    bird.update();
 }
