@@ -100,7 +100,7 @@
 
 					}
 					
-					if (Math.random() > 0.5) {
+					if (Math.random() == 2) { // decides amt of flocking
 						this.flock(boids);
 					}
 					this.move();
@@ -243,7 +243,7 @@
 				birds = [];
 				boids = [];
 				
-				var population = 20; // # of birds
+				var population = 8; // # of birds
 				
 				for (var i = 0; i < population; i++) { 
 
