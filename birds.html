@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	
 	<head>
-		<title>three.js canvas - geometry - birds</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+		<title>Birds</title>
+		
 		<style>
 			body {
 				color: #808080;
@@ -21,22 +22,20 @@
 				padding: 5px;
 			}
 		</style>
+		
 	</head>
+	
 	<body>
 
 		<div id="container"></div>
 
 		<script src="js/three.js"></script>
-
 		<script src="js/renderers/Projector.js"></script>
 		<script src="js/renderers/CanvasRenderer.js"></script>
-
 		<script src="js/libs/stats.min.js"></script>
-
 		<script src="js/obj/Bird.js"></script>
 
 		<script>
-
 			var Boid = function() {
 				var vector = new THREE.Vector3(),
 				_acceleration, 
@@ -44,7 +43,7 @@
 				_height = 500, 
 				_depth = 200, 
 				_goal, 
-				_neighborhoodRadius = 100,
+				_neighborhoodRadius = 100, // controls spreading out
 				_maxSpeed = 2, // bird speed
 				_maxSteerForce = .05, // steer force toward other birds
 				_avoidWalls = false;
@@ -219,7 +218,6 @@
 		</script>
 
 		<script>
-			
 			// establishing screen sizes
 			var SCREEN_WIDTH = window.innerWidth,
 			SCREEN_HEIGHT = window.innerHeight,
