@@ -46,7 +46,7 @@
 				_goal, 
 				_neighborhoodRadius = 100,
 				_maxSpeed = 2, // bird speed
-				_maxSteerForce = .1, // steer force toward other birds
+				_maxSteerForce = .05, // steer force toward other birds
 				_avoidWalls = false;
 				this.position = new THREE.Vector3();
 				this.velocity = new THREE.Vector3();
@@ -239,21 +239,21 @@
 			function init() {
 
 				camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000);
-				camera.position.z = 450;
+				camera.position.z = 450; // controls zoom from distange z=0
 
 				scene = new THREE.Scene();
 
 				birds = [];
 				boids = [];
 				
-				var population = 8; // # of birds
+				var population = 20; // # of birds
 				
 				for (var i = 0; i < population; i++) { 
 
 					boid = boids[ i ] = new Boid();
-					boid.position.x = Math.random() * 400 - 200; // random x pos
-					boid.position.y = Math.random() * 400 - 200; // ...
-					boid.position.z = Math.random() * 400 - 200; // ...
+					boid.position.x = Math.random() * 500 - 250; // random x pos
+					boid.position.y = Math.random() * 500 - 250; // ...
+					boid.position.z = Math.random() * 500 - 250; // ...
 					boid.velocity.x = Math.random() * 2 - 1; 
 					boid.velocity.y = Math.random() * 2 - 1;
 					boid.velocity.z = Math.random() * 2 - 1;
