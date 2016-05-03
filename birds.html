@@ -231,14 +231,13 @@
 
 			var boid, boids;
 
-			var stats;
-
 			init();
 			animate();
 
 			function init() {
 
 				camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000);
+				// PerspectiveCamera defines camera frustum (vertical fov, aspect ratio, frustum near plane, frustum far plane)
 				camera.position.z = 450; // controls zoom from distange z=0
 
 				scene = new THREE.Scene();
