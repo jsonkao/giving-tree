@@ -8,4 +8,4 @@ very minimalistic.<br>
 ###Progress
 Figuring out three.js. Yet to start designing tree/leaf layers in AI. 
 ###Live Preview
-http://marge.stuy.edu/~jason.kao/Github/tree
+http://marge.stuy.edu/~jason.kao/Github/giving-tree/birds.html
