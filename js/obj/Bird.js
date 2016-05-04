@@ -1,3 +1,7 @@
+/*
+* @author mrdoob / http://mrdoob.com/
+*/
+
 var Bird = function () {
 
 	var scope = this;
